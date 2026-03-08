@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass1</title>
+</head>
+<body>
+    <p>Addition : <span id="add"></span></p>
+    <p>Subtraction : <span id="sub"></span></p>
+    <p>Multiplication : <span id="mul"></span></p>
+    <p>Division : <span id="div"></span></p>
+    <p>Modulus : <span id="mod"></span></p>
+
+
+    <script>
+        let num1=Number(prompt("Enter the first number"))
+        let num2=Number(prompt("Enter the second number"))
+
+        document.getElementById("add").innerHTML=num1+num2
+        document.getElementById("sub").innerHTML=num1-num2
+        document.getElementById("mul").innerHTML=num1*num2
+        document.getElementById("div").innerHTML=num1/num2
+        document.getElementById("mod").innerHTML=num1%num2
+
+    </script>
+</body>
+</html>

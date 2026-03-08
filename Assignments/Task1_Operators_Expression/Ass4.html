@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass4</title>
+</head>
+<body>
+    <p>initial value of x : <spa id="x"></span></p>
+    <p>After Adding : <span id="add"></span></p>
+    <p>After Subtracting : <span id="sub"></span></p>
+    <p>After Multiplying : <span id="mul"></span></p>
+    <p>After Division : <span id="div"></span></p>
+    <p>After Modulus : <span id="mod"></span></p>
+
+    <script>
+        let x=10;
+        document.getElementById("x").innerHTML=x;
+        document.getElementById("add").innerHTML=x+=5;
+        document.getElementById("sub").innerHTML=x-=10;
+        document.getElementById("mul").innerHTML=x*=3;
+        document.getElementById("div").innerHTML=x/=2;
+        document.getElementById("mod").innerHTML=x%=3;
+
+    </script>
+
+</body>
+</html>

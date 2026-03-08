@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass10</title>
+</head>
+<body>
+
+<p id="total">Total Amount : </p>
+<p id="discount">Discounted Total : </p>
+
+<script>
+
+let total = parseFloat(prompt("Enter total amount"));
+
+let discountedTotal = total;
+
+if(total > 100){
+    discountedTotal -= total * 0.10;   
+}
+
+document.getElementById("total").innerHTML = "Total Amount : " + total;
+document.getElementById("discount").innerHTML = "Discounted Total : " + discountedTotal;
+
+</script>
+
+</body>
+</html>
+
+

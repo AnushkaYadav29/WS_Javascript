@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass8</title>
+</head>
+<body>
+    <p id="BMI"></p>
+    <p id="category">: </p>
+
+
+    <script>
+        let weight=parseFloat(prompt("Enter weight (kg)"));
+        let height=parseFloat(prompt("Enter height (m)"));
+
+        let BMI = weight / (height*height);
+        document.getElementById("BMI").innerHTML="BMI :"+BMI;
+
+        let category="";
+
+        if(BMI<18.5){
+            category="Underweight"
+        }else if(BMI>=18.5 && BMI<24.9){
+            category="Normal weight"
+        }else if(BMI>=25 && BMI<29.9){
+            category="Overweight"
+        }else{
+            category="Obesity"
+        }
+
+        document.getElementById("category").innerHTML="Category : "+category
+
+
+
+    </script>
+</body>
+</html>

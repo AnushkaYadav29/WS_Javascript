@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass2</title>
+</head>
+<body>
+    <p id="greater"></p>
+    <p id="less"></p>
+    <p id="equal"></p>
+
+
+    <script>
+        let num1=Number(prompt("Enter the first number"));
+        let num2=Number(prompt("Enter the second number"));
+
+        document.getElementById("greater").innerHTML="Is first number greater than second?"+(num1>num2);
+        document.getElementById("less").innerHTML="Is first number less than second?"+(num1<num2);
+        document.getElementById("equal").innerHTML="Is first number equal to second?"+(num1==num2);
+
+    </script>
+</body>
+</html>
