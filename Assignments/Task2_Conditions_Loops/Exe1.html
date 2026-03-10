@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe1</title>
+</head>
+<body>
+<P id="num"></P>
+
+    <script>
+        let num1=Number(prompt("Enter a Number : "));
+        let checkedNum="";
+        if(num1<0){
+            checkedNum="negative"
+        }else if(num1>=1){
+            checkedNum="positive"
+        }else{
+            checkedNum="zero"
+        }
+    
+
+        document.getElementById("num").innerHTML="The number is "+checkedNum
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Number Pyramid</title>
+  </head>
+
+  <body>
+    <h2>Number Pyramid Pattern</h2>
+
+    <pre id="output"></pre>
+
+    <script>
+      function generatePyramid(rows) {
+        let result = "";
+
+        for (let i = 1; i <= rows; i++) {
+          // spaces
+          for (let space = 1; space <= rows - i; space++) {
+            result += " ";
+          }
+
+          // increasing numbers
+          for (let num = 1; num <= i; num++) {
+            result += num;
+          }
+
+          // decreasing numbers
+          for (let num = i - 1; num >= 1; num--) {
+            result += num;
+          }
+
+          result += "\n";
+        }
+
+        document.getElementById("output").innerText = result;
+      }
+
+      generatePyramid(5);
+    </script>
+  </body>
+</html>

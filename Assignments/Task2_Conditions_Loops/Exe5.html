@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of digits</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let num=Number(prompt("Enter a number : "))
+            let sumOfDigit=0;
+            let digit;
+            while(num>0){
+                digit=num%10;
+                sumOfDigit+=digit;
+                num=Math.floor(num/10);
+            }
+            document.getElementById("result").innerHTML="The sum of digit is : "+sumOfDigit
+
+    </script>
+</body>
+</html>

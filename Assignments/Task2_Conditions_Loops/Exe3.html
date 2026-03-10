@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Guessing</title>
+</head>
+
+<body>
+
+<p id="result"></p>
+
+<script>
+
+let num = Math.floor(Math.random() * 10) + 1;
+
+function checkGuess() {
+
+    let result = document.getElementById("result");
+
+    let n = Number(prompt("Guess the Number (1-10):"));
+
+    while(n != num){
+
+        if(n < num){
+            result.innerHTML = "Too low! Try again.";
+        }
+        else{
+            result.innerHTML = "Too high! Try again.";
+        }
+
+        n = Number(prompt("Guess again:"));
+    }
+
+    result.innerHTML = "Correct! You guessed the number " + num;
+
+}
+
+checkGuess();
+
+</script>
+
+</body>
+</html>
