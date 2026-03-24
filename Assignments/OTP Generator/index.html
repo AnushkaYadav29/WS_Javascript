@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+    <style>
+
+</style>
+    
+  </head>
+  <body class="bg-primary">
+
+    <div class="container w-50 ">
+        <div class="row">
+            <div class="col-12 col-md-6 p-5">
+                <h3 class="text-white" 
+                style="border-left: 5px solid white; padding-left: 9px; margin-top:20px;">
+                OTP <br /> VERIFICATION <br />JAVASCRIPT
+                </h3>
+            </div>
+            <div class="col-12 col-md-6 p-5">
+                <div class="container rounded bg-light p-4">
+                    <div class="text-center mb-2">
+  <i class="fa-solid fa-shield-check" style="font-size:40px; color:#4a6cf7;"></i>
+</div>
+                    <p class="lead text-center">Enter OTP Code</p>
+                    <div class="container ">
+                    <div class="d-flex justify-content-around mb-2">
+                    <input type="text" size="1" id="firstDigit"  inputmode="numeric" pattern="[0-9]*" oninput="moveToNext('secondDigit')"/>
+                    <input type="text" size="1" id="secondDigit"  inputmode="numeric" pattern="[0-9]*" oninput="moveToNext('ThirdDigit')" />
+                    <input type="text" size="1" id="ThirdDigit"  inputmode="numeric" pattern="[0-9]*" oninput="moveToNext('FourthDigit')" />
+                    <input type="text" size="1" id="FourthDigit"  inputmode="numeric" pattern="[0-9]*" oninput="moveToNext('btnVerify')" />
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="VerifyOTP()" id="btnVerify">Verify OTP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container w-25" style="position: absolute; bottom: 20px; left: 20px;">
+    <button onclick="generateOTP()">Generate OTP</button>
+</div>
+<script>
+    function generateOTP(){
+         otp = String(1000 + Math.floor(Math.random() *9000))
+        
+        alert(`Your OTP ${otp}`)
+    }
+
+    function VerifyOTP(){
+        otpFirst =document.getElementById('firstDigit')
+        otpSecond = document.getElementById('secondDigit')
+        otpThird = document.getElementById('ThirdDigit')
+        otpFourth = document.getElementById('FourthDigit')
+
+        otpFromUser =  otpFirst.value+otpSecond.value+otpThird.value+otpFourth.value
+
+        if(otp == otpFromUser){
+            alert("Verified successfully")
+        }else{
+            alert("Invalid OTP")
+        }
+        document.getElementById('firstDigit').value = ''
+        document.getElementById('secondDigit').value = ''
+        document.getElementById('ThirdDigit').value = '' 
+        document.getElementById('FourthDigit').value = ''
+    }
+
+
+    function moveToNext(nextElmt){
+
+        document.getElementById(nextElmt).focus()
+
+        // validation for digit should digit 0 -9 
+        //check length 
+    }
+
+
+
+
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
