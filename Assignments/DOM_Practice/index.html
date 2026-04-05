@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="para">Hello</p>
+    <button id="btn">Click me</button>
+
+    <script>
+        let elmt=document.getElementById("para")
+        // elmt.innerHTML="Anushka"
+
+        let btn=document.getElementById("btn")
+        btn.addEventListener("click",function(){
+            document.body.style.color="blue"
+        })
+
+    </script> -->
+
+
+    <p id="text">Hello</p>
+<button id="btn">Click Me</button>
+
+<script>
+let btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+    document.getElementById("text").innerHTML = "Changed!";
+    document.body.style.backgroundColor="pink"
+});
+</script>
+
+
+
+</body>
+</html>
